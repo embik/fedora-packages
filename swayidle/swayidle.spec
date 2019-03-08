@@ -8,6 +8,7 @@ License:	MIT
 URL:		https://github.com/swaywm/swayidle
 Source0:	%{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  git
 BuildRequires:  make
