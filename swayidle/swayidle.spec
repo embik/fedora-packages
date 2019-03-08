@@ -14,6 +14,7 @@ BuildRequires:  git
 BuildRequires:  make
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols)
+BuildRequires:  pkgconfig(libsystemd)
 BuildRequires:  scdoc
 BuildRequires:  wayland-devel
 
