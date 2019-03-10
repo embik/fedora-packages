@@ -19,6 +19,9 @@ BuildRequires:  pkgconfig(cairo)
 
 Requires:	    cairo
 
+Recommends:     sway
+Recommends:     slurp
+
 %description
 Grab images from a Wayland compositor. Works great with slurp and with sway >= 1.0.
 
