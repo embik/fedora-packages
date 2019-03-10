@@ -11,6 +11,7 @@ Source0:	%{url}/archive/v%{version}/%{name}-v%{version}.tar.gz
 BuildRequires:  gcc
 BuildRequires:  meson
 BuildRequires:  make
+BuildRequires:  scdoc
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(libsystemd)
