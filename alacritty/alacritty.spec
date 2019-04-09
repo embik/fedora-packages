@@ -1,5 +1,5 @@
 Name:		alacritty
-Version:	0.2.9
+Version:	0.3.0
 Release:	1%{?dist}
 Summary:	A cross-platform, GPU enhanced terminal emulator
 
@@ -29,13 +29,13 @@ cargo build --release
 
 %install
 install -D -m755 target/release/%{name} %{buildroot}/%{_bindir}/%{name}
-install -D -m644 alacritty.desktop %{buildroot}/%{_datadir}/applications/alacritty.desktop
-install -D -m644 alacritty-completions.bash %{buildroot}/%{_datadir}/bash-completion/completions/alacritty
-install -D -m644 alacritty-completions.zsh %{buildroot}/%{_datadir}/zsh/site-functions/_alacritty
+install -D -m644 extra/linux/alacritty.desktop %{buildroot}/%{_datadir}/applications/alacritty.desktop
+install -D -m644 extra/completions/alacritty.bash %{buildroot}/%{_datadir}/bash-completion/completions/alacritty
+install -D -m644 extra/completions/_alacritty %{buildroot}/%{_datadir}/zsh/site-functions/_alacritty
 install -d -m755 %{buildroot}/%{_datadir}/%{name}
 install -m644 alacritty*.yml %{buildroot}/%{_datadir}/%{name}
 install -d -m755 %{buildroot}/%{_datadir}/terminfo/a
-tic -o %{buildroot}/%{_datadir}/terminfo alacritty.info
+tic -o %{buildroot}/%{_datadir}/terminfo -xe alacritty,alacritty-direct extra/alacritty.info
 
 %files
 %doc README.md
@@ -47,5 +47,8 @@ tic -o %{buildroot}/%{_datadir}/terminfo alacritty.info
 %{_datadir}/terminfo/*
 
 %changelog
+* Tue Apr 09 2019 Marvin Beckers <mail@embik.me> 0.3.0-1
+- Update to upstream release 0.3.0
+
 * Fri Mar 08 2019 Marvin Beckers <mail@embik.me> 0.2.9-1
 - Initial package version
