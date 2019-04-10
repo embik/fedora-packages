@@ -1,4 +1,3 @@
-%global commit  0.3
 %global gitdate %{nil}
 %global gitrel  %{nil}
 %global gitver  %{nil}
@@ -12,7 +11,7 @@
 
 
 Name:           wlroots
-Version:        0.3
+Version:        0.5.0
 Release:        1%{?gitrel}%{?dist}
 Summary:        A modular Wayland compositor library
 
@@ -33,7 +32,7 @@ Summary:        A modular Wayland compositor library
 # underlying licenses.
 License:        MIT
 URL:            https://github.com/swaywm/%{name}
-Source0:        https://github.com/swaywm/wlroots/archive/%{commit}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/swaywm/wlroots/archive/%{version}/%{name}-%{version}.tar.gz
 
 
 BuildRequires:  gcc
@@ -78,7 +77,7 @@ Development files for %{name}.
 
 %prep
 %define __scm git_am
-%autosetup -n %{name}-%{commit} -p 1
+%autosetup -n %{name}-%{version} -p 1
 
 
 %build
