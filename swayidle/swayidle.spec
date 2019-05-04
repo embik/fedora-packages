@@ -1,5 +1,5 @@
 Name:		swayidle
-Version:	1.2
+Version:	1.3
 Release:	1%{?dist}
 Summary:	Idle management daemon for Wayland
 
