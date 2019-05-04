@@ -123,7 +123,7 @@ done
 
 
 %changelog
-* Sat Apr 04 2019 Marvin Beckers <mail@embik.me>
+* Sat May 04 2019 Marvin Beckers <mail@embik.me>
 - Bump to upstream version 0.5.0
 
 * Sun Feb 03 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.1-5

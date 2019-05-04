@@ -1,6 +1,6 @@
 Name:           sway
 Version:        1.0
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        i3-compatible window manager for Wayland
 Group:          User Interface/X
 License:        MIT
@@ -71,6 +71,7 @@ sed -i "s|^output \* bg .*|output * bg /usr/share/backgrounds/f%{fedora}/default
 %config(noreplace) %{_sysconfdir}/sway/security.d/00-defaults
 %{_mandir}/man1/sway*.1*
 %{_mandir}/man5/sway*.5*
+%{_mandir}/man7/sway*.7*
 %caps(cap_sys_ptrace,cap_sys_tty_config=eip) %{_bindir}/sway
 %{_bindir}/swaybar
 %{_bindir}/swaybg
@@ -83,7 +84,7 @@ sed -i "s|^output \* bg .*|output * bg /usr/share/backgrounds/f%{fedora}/default
 %{_datadir}/backgrounds/sway/*.png
 
 %changelog
-* Sat Apr 04 2019 Marvin Beckers <mail@embik.me> - 1.0
+* Sat May 04 2019 Marvin Beckers <mail@embik.me> - 1.0-1
 - Update to 1.0 release
 
 * Wed Mar 06 2019 Marvin Beckers <mail@embik.me> - 1.0-rc2
