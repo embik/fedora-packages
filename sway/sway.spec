@@ -1,12 +1,11 @@
 Name:           sway
 Version:        1.0
-Release:        0.rc2%{?dist}
+Release:        0%{?dist}
 Summary:        i3-compatible window manager for Wayland
 Group:          User Interface/X
 License:        MIT
 URL:            https://github.com/swaywm/sway
-%global versrc_tail -rc2
-Source0:        %{url}/archive/%{version}%{?versrc_tail}/%{name}-%{version}%{?versrc_tail}.tar.gz
+Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  asciidoc
 BuildRequires:  gcc-c++
@@ -30,7 +29,7 @@ BuildRequires:  pkgconfig(wayland-server)
 BuildRequires:  pkgconfig(libevdev)
 # cannot depend like this since pc file is versioned 0.0.1
 #BuildRequires:  pkgconfig(wlroots) >= 0.1
-BuildRequires:  wlroots-devel >= 0.3
+BuildRequires:  wlroots-devel >= 0.5.0
 BuildRequires:  wayland-devel
 BuildRequires:  scdoc >= 1.8
 # Dmenu is the default launcher in sway
@@ -85,6 +84,9 @@ sed -i "s|^output \* bg .*|output * bg /usr/share/backgrounds/f%{fedora}/default
 %{_datadir}/backgrounds/sway/*.png
 
 %changelog
+* Sat Apr 04 2019 Marvin Beckers <mail@embik.me> - 1.0
+- Update to 1.0 release
+
 * Wed Mar 06 2019 Marvin Beckers <mail@embik.me> - 1.0-rc2
 - Update to 1.0-rc2
 - Drop swayidle and swaylock
