@@ -1,5 +1,5 @@
 Name:		swaylock
-Version:	1.3
+Version:	1.4
 Release:	1%{?dist}
 Summary:	Screen locker for Wayland
 
@@ -54,5 +54,8 @@ mkdir %{_target_Platform}
 %exclude %{_datadir}/fish/completions/swaylock.fish
 
 %changelog
+* Sat May 04 2019 Marvin Beckers <mail@embik.me> 1.4-1
+- Update to upstream release 1.4
+
 * Fri Mar 08 2019 Marvin Beckers <mail@embik.me> 1.3-1
 - Initial package release
