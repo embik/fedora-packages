@@ -6,6 +6,7 @@ Group:          User Interface/X
 License:        MIT
 URL:            https://github.com/swaywm/sway
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+Patch0:         0001-Fix-size_t-temporary-underflow-in-log_loaded_themes.patch
 
 BuildRequires:  asciidoc
 BuildRequires:  gcc-c++
@@ -27,14 +28,12 @@ BuildRequires:  pkgconfig(wayland-egl)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(wayland-server)
 BuildRequires:  pkgconfig(libevdev)
-# cannot depend like this since pc file is versioned 0.0.1
-#BuildRequires:  pkgconfig(wlroots) >= 0.1
-BuildRequires:  wlroots-devel >= 0.5.0
+BuildRequires:  pkgconfig(wlroots) >= 0.5.0
+BuildRequires:  pkgconfig(libinput) >= 1.6.0
 BuildRequires:  wayland-devel
 BuildRequires:  scdoc >= 1.8
 # Dmenu is the default launcher in sway
-Requires:       dmenu
-Requires:       libinput >= 1.6.0
+Recommends:     dmenu
 # By default the Fedora background is used
 Recommends:     f%{fedora}-backgrounds-base
 # dmenu (as well as rxvt and many others) requires XWayland on Sway
@@ -49,7 +48,7 @@ Sway is a tiling window manager supporting Wayland compositor protocol and
 i3-compatible configuration.
 
 %prep
-%autosetup -p 1 -n %{name}-%{version}%{?versrc_tail}
+%autosetup -p 1 -n %{name}-%{version}
 mkdir %{_target_platform}
 
 %build
