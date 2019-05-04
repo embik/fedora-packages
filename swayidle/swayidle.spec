@@ -45,5 +45,8 @@ mkdir %{_target_Platform}
 %exclude %{_datadir}/fish/completions/swayidle.fish
 
 %changelog
+* Sat May 04 2019 Marvin Beckers <mail@embik.me> 1.3-1
+- Update to upstream release 1.3
+
 * Fri Mar 08 2019 Marvin Beckers <mail@embik.me> 1.2-1
 - Initial package release
