@@ -7,7 +7,7 @@
 #global gitver  -#{gitdate}git#{scommit}
 
 
-%global api_ver 0
+%global api_ver 2.3.1
 
 
 Name:           wlroots
@@ -129,6 +129,9 @@ done
 
 
 %changelog
+* Sat Apr 4 2019 Marvin Beckers <mail@embik.me>
+- Bump to upstream version 0.5.0
+
 * Sun Feb 03 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.1-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
