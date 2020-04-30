@@ -19,6 +19,7 @@ Pywal is a tool that generates a color palette from the dominant colors in an im
 %package -n python3-%{srcname}
 Summary:        %{summary}
 BuildRequires:  python3-devel
+Buildrequires:  GraphicsMagick
 Requires:       GraphicsMagick
 Requires:       procps-ng
 
